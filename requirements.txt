@@ -3,10 +3,10 @@ h5py
 psutil
 tqdm
 termcolor
-tensorboard
-tensorboardX
+#tensorboard
+#tensorboardX
 imageio
 imageio-ffmpeg
 egl_probe>=1.0.1
-torch
-torchvision
+#torch
+#torchvision

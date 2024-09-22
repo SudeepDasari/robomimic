@@ -7,9 +7,7 @@ import json
 import numpy as np
 from copy import deepcopy
 
-import mujoco_py
 import robosuite
-from robosuite.utils.mjcf_utils import postprocess_model_xml
 
 import robomimic.utils.obs_utils as ObsUtils
 import robomimic.envs.env_base as EB
@@ -131,8 +129,8 @@ class EnvRobosuite(EB.EnvBase):
         should_ret = False
         if "model" in state:
             self.reset()
-            xml = postprocess_model_xml(state["model"])
-            self.env.reset_from_xml_string(xml)
+            #xml = postprocess_model_xml(state["model"])
+            #self.env.reset_from_xml_string(xml)
             self.env.sim.reset()
             if not self._is_v1:
                 # hide teleop visualization after restoring from model
